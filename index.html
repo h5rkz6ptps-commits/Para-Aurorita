@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Para mi bebito Aurorita ❤️</title>
+    <meta name="description" content="Una sorpresa especial para la niña más linda del mundo. Solo para los ojos de Aurorita.">
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         body { 
@@ -19,7 +20,7 @@
         }
         .card { 
             background: white; 
-            padding: 2.5rem; 
+            padding: 2rem; 
             border-radius: 30px; 
             box-shadow: 0 15px 35px rgba(214, 51, 132, 0.2); 
             max-width: 350px; 
@@ -40,7 +41,7 @@
             border-radius: 50px; 
             cursor: pointer; 
             font-size: 1.1rem; 
-            margin-top: 20px; 
+            margin-top: 15px; 
             font-weight: bold;
             transition: transform 0.2s;
         }
@@ -48,7 +49,7 @@
         #btnSi { z-index: 2; position: relative; }
         #btnNo { position: absolute; z-index: 10; transition: 0.1s ease; }
         
-        .emoji { font-size: 3.5rem; margin-bottom: 10px; animation: heartbeat 1.5s infinite; }
+        .emoji { font-size: 3rem; margin-bottom: 5px; animation: heartbeat 1.5s infinite; }
         
         .pet-image {
             width: 100%;
@@ -57,12 +58,13 @@
             border-radius: 15px;
             margin: 15px 0;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background-color: #f0f0f0;
         }
 
         .cita-mensaje {
             color: #d63384;
             font-weight: bold;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-top: 15px;
             display: block;
             background: #fff0f3;
@@ -84,7 +86,7 @@
         <div class="emoji">🎁</div>
         <h1>¡Hola, amor!</h1>
         <p>Tengo algo especial <br><b>para mi bebito Aurorita</b>...</p>
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/2280797840090557656_0" alt="Pug Cervato" class="pet-image">
+        <img src="https://images.unsplash.com/photo-1517423440428-a5a00ad493e8?q=80&w=500" alt="Pug" class="pet-image">
         <button onclick="cambiarPestaña(1, 2)">Ver qué es ✨</button>
     </div>
 
@@ -92,7 +94,7 @@
         <div class="emoji">💖</div>
         <h1>¿Sabes cuánto te quiero?</h1>
         <p>Mucho más de lo que alcanzan a contar todas las estrellas.</p>
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/10682544124428197690_1" alt="Bulldog Inglés Merle" class="pet-image">
+        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=500" alt="Bulldog" class="pet-image">
         <button onclick="cambiarPestaña(2, 3)">Siguiente... 👉</button>
     </div>
 
@@ -100,7 +102,7 @@
         <div class="emoji">🌹</div>
         <h1 id="tituloFinal">¿Quieres ser mi San Valentín?</h1>
         <p id="textoFinal">Eres la mejor, <b>Aurorita</b>.</p>
-        <img src="http://googleusercontent.com/image_collection/image_retrieval/13800582631473348834_1" alt="Pug y Bulldog" class="pet-image">
+        <img src="https://images.unsplash.com/photo-1541364983171-a8ba01e95cfc?q=80&w=500" alt="Perritos" class="pet-image">
         <div id="contenedorBotones" style="height: 100px; margin-top: 20px; position: relative;">
             <button id="btnSi" onclick="victoria()">¡SÍ! ❤️</button>
             <button id="btnNo" onmouseover="moverBoton()" onclick="moverBoton()">No</button>
@@ -146,14 +148,14 @@
                 }
             }());
 
-            // Cambiar contenido final con el mensaje de la cita
             document.getElementById('tituloFinal').innerHTML = "¡SABÍA QUE DIRÍAS QUE SÍ! 😍";
             document.getElementById('textoFinal').innerHTML = `
                 Te quiero mucho, mi bebito Aurorita. ❤️<br>
-                <span class="cita-mensaje">Tenemos una cita el 14 de febrero a las 4:00 p.m. bb</span>
+                <span class="cita-mensaje">tenemos una cita el 14 de febrero a las 4:00 p.m. bb</span>
             `;
             document.getElementById('btnNo').style.display = 'none';
             document.getElementById('btnSi').style.display = 'none';
+            // Ocultamos la imagen para que el mensaje de la cita se vea grande y claro
             document.querySelector('#pestaña3 .pet-image').style.display = 'none';
         }
     </script>
